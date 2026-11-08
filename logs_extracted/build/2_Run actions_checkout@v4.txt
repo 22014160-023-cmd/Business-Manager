@@ -1,73 +1,73 @@
-﻿2026-11-08T10:38:09.0525280Z ##[group]Run actions/checkout@v4
-2026-11-08T10:38:09.0526107Z with:
-2026-11-08T10:38:09.0526565Z   repository: 22014160-023-cmd/Business-Manager
-2026-11-08T10:38:09.0530581Z   token: ***
-2026-11-08T10:38:09.0530968Z   ssh-strict: true
-2026-11-08T10:38:09.0531350Z   ssh-user: git
-2026-11-08T10:38:09.0531744Z   persist-credentials: true
-2026-11-08T10:38:09.0532172Z   clean: true
-2026-11-08T10:38:09.0532567Z   sparse-checkout-cone-mode: true
-2026-11-08T10:38:09.0533034Z   fetch-depth: 1
-2026-11-08T10:38:09.0533414Z   fetch-tags: false
-2026-11-08T10:38:09.0533805Z   show-progress: true
-2026-11-08T10:38:09.0534196Z   lfs: false
-2026-11-08T10:38:09.0534558Z   submodules: false
-2026-11-08T10:38:09.0534951Z   set-safe-directory: true
-2026-11-08T10:38:09.0535420Z   allow-unsafe-pr-checkout: false
-2026-11-08T10:38:09.0536104Z ##[endgroup]
-2026-11-08T10:38:09.4625868Z Syncing repository: 22014160-023-cmd/Business-Manager
-2026-11-08T10:38:09.4629374Z ##[group]Getting Git version info
-2026-11-08T10:38:09.4631341Z Working directory is '/home/runner/work/Business-Manager/Business-Manager'
-2026-11-08T10:38:09.4632847Z [command]/usr/bin/git version
-2026-11-08T10:38:09.4657543Z git version 2.56.0
-2026-11-08T10:38:09.4679416Z ##[endgroup]
-2026-11-08T10:38:09.4696719Z Temporarily overriding HOME='/home/runner/work/_temp/494c907e-7ccf-440d-b63f-59d9ec7f9e7f' before making global git config changes
-2026-11-08T10:38:09.4699651Z Adding repository directory to the temporary git global config as a safe directory
-2026-11-08T10:38:09.4703403Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Business-Manager/Business-Manager
-2026-11-08T10:38:09.4785776Z Deleting the contents of '/home/runner/work/Business-Manager/Business-Manager'
-2026-11-08T10:38:09.4790060Z ##[group]Initializing the repository
-2026-11-08T10:38:09.4796539Z [command]/usr/bin/git init /home/runner/work/Business-Manager/Business-Manager
-2026-11-08T10:38:09.4903778Z hint: Using 'master' as the name for the initial branch. This default branch name
-2026-11-08T10:38:09.4905357Z hint: will change to "main" in Git 3.0. To configure the initial branch name
-2026-11-08T10:38:09.4906557Z hint: to use in all of your new repositories, which will suppress this warning,
-2026-11-08T10:38:09.4907526Z hint: call:
-2026-11-08T10:38:09.4907995Z hint:
-2026-11-08T10:38:09.4908784Z hint: 	git config --global init.defaultBranch <name>
-2026-11-08T10:38:09.4909470Z hint:
-2026-11-08T10:38:09.4910097Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-2026-11-08T10:38:09.4911510Z hint: 'development'. The just-created branch can be renamed via this command:
-2026-11-08T10:38:09.4912341Z hint:
-2026-11-08T10:38:09.4913115Z hint: 	git branch -m <name>
-2026-11-08T10:38:09.4914010Z hint:
-2026-11-08T10:38:09.4915338Z hint: Disable this message with "git config set advice.defaultBranchName false"
-2026-11-08T10:38:09.4917081Z Initialized empty Git repository in /home/runner/work/Business-Manager/Business-Manager/.git/
-2026-11-08T10:38:09.4934560Z [command]/usr/bin/git remote add origin https://github.com/22014160-023-cmd/Business-Manager
-2026-11-08T10:38:09.4979681Z ##[endgroup]
-2026-11-08T10:38:09.4980914Z ##[group]Disabling automatic garbage collection
-2026-11-08T10:38:09.4985382Z [command]/usr/bin/git config --local gc.auto 0
-2026-11-08T10:38:09.5021533Z ##[endgroup]
-2026-11-08T10:38:09.5022450Z ##[group]Setting up auth
-2026-11-08T10:38:09.5030883Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2026-11-08T10:38:09.5067477Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2026-11-08T10:38:09.5500908Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2026-11-08T10:38:09.5538908Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2026-11-08T10:38:09.5772096Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-2026-11-08T10:38:09.5804798Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-2026-11-08T10:38:09.6036519Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
-2026-11-08T10:38:09.6073450Z ##[endgroup]
-2026-11-08T10:38:09.6074487Z ##[group]Fetching the repository
-2026-11-08T10:38:09.6083070Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +0d5f0fc23ddf8760afcd1f526ddc3546a4202fba:refs/remotes/origin/main
-2026-11-08T10:38:09.8909412Z From https://github.com/22014160-023-cmd/Business-Manager
-2026-11-08T10:38:09.8912211Z  * [new ref]         0d5f0fc23ddf8760afcd1f526ddc3546a4202fba -> origin/main
-2026-11-08T10:38:09.8916853Z ##[endgroup]
-2026-11-08T10:38:09.8918352Z ##[group]Determining the checkout info
-2026-11-08T10:38:09.8920047Z ##[endgroup]
-2026-11-08T10:38:09.8923817Z [command]/usr/bin/git sparse-checkout disable
-2026-11-08T10:38:09.8980583Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
-2026-11-08T10:38:09.9013185Z ##[group]Checking out the ref
-2026-11-08T10:38:09.9016219Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
-2026-11-08T10:38:09.9085926Z Switched to a new branch 'main'
-2026-11-08T10:38:09.9089883Z branch 'main' set up to track 'origin/main'.
-2026-11-08T10:38:09.9099628Z ##[endgroup]
-2026-11-08T10:38:09.9147553Z [command]/usr/bin/git log -1 --format=%H
-2026-11-08T10:38:09.9172416Z 0d5f0fc23ddf8760afcd1f526ddc3546a4202fba
+﻿2026-11-08T10:40:03.6585337Z ##[group]Run actions/checkout@v4
+2026-11-08T10:40:03.6586163Z with:
+2026-11-08T10:40:03.6586468Z   repository: 22014160-023-cmd/Business-Manager
+2026-11-08T10:40:03.6589175Z   token: ***
+2026-11-08T10:40:03.6589439Z   ssh-strict: true
+2026-11-08T10:40:03.6589711Z   ssh-user: git
+2026-11-08T10:40:03.6589983Z   persist-credentials: true
+2026-11-08T10:40:03.6590288Z   clean: true
+2026-11-08T10:40:03.6590562Z   sparse-checkout-cone-mode: true
+2026-11-08T10:40:03.6590919Z   fetch-depth: 1
+2026-11-08T10:40:03.6591181Z   fetch-tags: false
+2026-11-08T10:40:03.6591571Z   show-progress: true
+2026-11-08T10:40:03.6591861Z   lfs: false
+2026-11-08T10:40:03.6592139Z   submodules: false
+2026-11-08T10:40:03.6592419Z   set-safe-directory: true
+2026-11-08T10:40:03.6592744Z   allow-unsafe-pr-checkout: false
+2026-11-08T10:40:03.6593203Z ##[endgroup]
+2026-11-08T10:40:03.8528566Z Syncing repository: 22014160-023-cmd/Business-Manager
+2026-11-08T10:40:03.8530203Z ##[group]Getting Git version info
+2026-11-08T10:40:03.8531001Z Working directory is '/home/runner/work/Business-Manager/Business-Manager'
+2026-11-08T10:40:03.8532009Z [command]/usr/bin/git version
+2026-11-08T10:40:03.8539144Z git version 2.56.0
+2026-11-08T10:40:03.8552960Z ##[endgroup]
+2026-11-08T10:40:03.8565242Z Temporarily overriding HOME='/home/runner/work/_temp/a048310e-d47b-4f50-a727-5fa96146725a' before making global git config changes
+2026-11-08T10:40:03.8567186Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-08T10:40:03.8569127Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Business-Manager/Business-Manager
+2026-11-08T10:40:03.8630226Z Deleting the contents of '/home/runner/work/Business-Manager/Business-Manager'
+2026-11-08T10:40:03.8634042Z ##[group]Initializing the repository
+2026-11-08T10:40:03.8638122Z [command]/usr/bin/git init /home/runner/work/Business-Manager/Business-Manager
+2026-11-08T10:40:03.8808470Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-08T10:40:03.8810252Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-08T10:40:03.8811475Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-08T10:40:03.8812305Z hint: call:
+2026-11-08T10:40:03.8812712Z hint:
+2026-11-08T10:40:03.8813270Z hint: 	git config --global init.defaultBranch <name>
+2026-11-08T10:40:03.8813916Z hint:
+2026-11-08T10:40:03.8814564Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-08T10:40:03.8815739Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-08T10:40:03.8816590Z hint:
+2026-11-08T10:40:03.8817010Z hint: 	git branch -m <name>
+2026-11-08T10:40:03.8817484Z hint:
+2026-11-08T10:40:03.8818280Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-08T10:40:03.8819776Z Initialized empty Git repository in /home/runner/work/Business-Manager/Business-Manager/.git/
+2026-11-08T10:40:03.8828505Z [command]/usr/bin/git remote add origin https://github.com/22014160-023-cmd/Business-Manager
+2026-11-08T10:40:03.8879124Z ##[endgroup]
+2026-11-08T10:40:03.8880130Z ##[group]Disabling automatic garbage collection
+2026-11-08T10:40:03.8887760Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-08T10:40:03.8921798Z ##[endgroup]
+2026-11-08T10:40:03.8922597Z ##[group]Setting up auth
+2026-11-08T10:40:03.8927324Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-08T10:40:03.9390449Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-08T10:40:03.9397290Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-08T10:40:03.9428159Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-08T10:40:03.9662279Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-08T10:40:03.9693817Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-08T10:40:03.9925396Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-08T10:40:03.9978126Z ##[endgroup]
+2026-11-08T10:40:03.9979030Z ##[group]Fetching the repository
+2026-11-08T10:40:03.9986461Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ae9d8a375895b825c2ab339465be3baa50fce1ac:refs/remotes/origin/main
+2026-11-08T10:40:04.3722971Z From https://github.com/22014160-023-cmd/Business-Manager
+2026-11-08T10:40:04.3726072Z  * [new ref]         ae9d8a375895b825c2ab339465be3baa50fce1ac -> origin/main
+2026-11-08T10:40:04.3730328Z ##[endgroup]
+2026-11-08T10:40:04.3731476Z ##[group]Determining the checkout info
+2026-11-08T10:40:04.3732646Z ##[endgroup]
+2026-11-08T10:40:04.3735724Z [command]/usr/bin/git sparse-checkout disable
+2026-11-08T10:40:04.3785374Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-08T10:40:04.3814954Z ##[group]Checking out the ref
+2026-11-08T10:40:04.3818054Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-08T10:40:04.3896118Z Switched to a new branch 'main'
+2026-11-08T10:40:04.3899285Z branch 'main' set up to track 'origin/main'.
+2026-11-08T10:40:04.3905762Z ##[endgroup]
+2026-11-08T10:40:04.3945225Z [command]/usr/bin/git log -1 --format=%H
+2026-11-08T10:40:04.3968845Z ae9d8a375895b825c2ab339465be3baa50fce1ac
