@@ -1,0 +1,26 @@
+
+* { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body {
+    margin: 0; padding: 20px;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: white; min-height: 100vh;
+}
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+h1 { font-size: 24px; margin: 0; background: linear-gradient(90deg, #667eea, #764ba2); -webkit-background-clip: text; color: transparent; font-weight: bold; }
+.badge { background: #eb3349; color: white; padding: 4px 8px; border-radius: 12px; font-size: 10px; font-weight: bold; animation: pulse 1.5s infinite; }
+.card {
+    background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);
+    border-radius: 15px; padding: 20px; margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+.main-card h2 { font-size: 42px; margin: 10px 0; background: linear-gradient(90deg, #11998e, #38ef7d); -webkit-background-clip: text; color: transparent; font-weight: bold; }
+button {
+    background: linear-gradient(90deg, #667eea, #764ba2); border: none;
+    color: white; padding: 10px 15px; border-radius: 8px; font-weight: bold;
+    width: 100%; margin-top: 10px; cursor: pointer;
+}
+button:active { opacity: 0.8; }
+ul { list-style-type: none; padding: 0; margin: 0; }
+li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; }
+.footer { display: flex; gap: 10px; }
+@keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
