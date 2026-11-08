@@ -1,4 +1,3 @@
-
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
@@ -8,6 +7,9 @@ plugins {
 android {
     namespace 'com.businessmanager.app'
     compileSdk 33
+
+    // ✅ Chaquopy REQUIRES this explicit NDK version
+    ndkVersion "25.1.8937393"
 
     defaultConfig {
         applicationId "com.businessmanager.app"
@@ -20,15 +22,18 @@ android {
             abiFilters "arm64-v8a", "x86_64"
         }
     }
+
     buildTypes {
         release {
             minifyEnabled false
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
@@ -36,9 +41,10 @@ android {
 
 chaquopy {
     defaultConfig {
-        version = "3.11"
+        // ✅ Chaquopy 14.0.2 supports Python 3.8 only
+        version = "3.8"
         pip {
-            install "reportlab"
+            install "reportlab==3.6.12"
         }
     }
 }

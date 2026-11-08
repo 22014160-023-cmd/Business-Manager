@@ -28,6 +28,10 @@ jobs:
         echo "ANDROID_SDK_ROOT=/usr/local/lib/android/sdk" >> $GITHUB_ENV
         yes | /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager --licenses || true
         
+    - name: Install NDK
+      run: |
+        yes | /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager "ndk;25.1.8937393" || true
+        
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
       

@@ -1,0 +1,21 @@
+﻿2026-11-08T10:44:47.4418300Z Post job cleanup.
+2026-11-08T10:44:47.5920453Z In post-action step
+2026-11-08T10:44:47.5925108Z Stopping all Gradle daemons before saving Gradle User Home state
+2026-11-08T10:44:47.5926086Z (node:2550) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-08T10:44:47.5926948Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-08T10:44:47.5929859Z ##[group]Caching Gradle state
+2026-11-08T10:44:47.6084172Z Caching wrapper-zips with path '/home/runner/.gradle/wrapper/dists/gradle-8.1.1-bin/9wiye5v2saajue4irfo8ybqfp' and cache key: gradle-wrapper-zips-v1-afd0375446f1253bae891db7b1ab4e7b
+2026-11-08T10:44:47.6251371Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/Business-Manager/Business-Manager --files-from manifest.txt --use-compress-program zstdmt
+2026-11-08T10:44:47.8380737Z Caching dependencies with path '/home/runner/.gradle/caches/modules-*/files-*/*/*/*/*' and cache key: gradle-dependencies-v1-09387956c268e80aeff983c4b320ac2c
+2026-11-08T10:44:47.8925018Z Caching instrumented-jars with path '/home/runner/.gradle/caches/jars-*/*/' and cache key: gradle-instrumented-jars-v1-536d6aff2f58aef5241cb3b63f6c25db
+2026-11-08T10:44:47.9384022Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/Business-Manager/Business-Manager --files-from manifest.txt --use-compress-program zstdmt
+2026-11-08T10:44:48.1202828Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/Business-Manager/Business-Manager --files-from manifest.txt --use-compress-program zstdmt
+2026-11-08T10:44:48.2287718Z ##[warning]Failed to save cache entry with path '/home/runner/.gradle/wrapper/dists/gradle-8.1.1-bin/9wiye5v2saajue4irfo8ybqfp' and key: gradle-wrapper-zips-v1-afd0375446f1253bae891db7b1ab4e7b: Error: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>0oFLwagAAAAAO6IgsqHkPSrqzYXdMyStLUEhYMzFFREdFMDYwNwBFZGdl
+2026-11-08T10:44:48.7956394Z ##[warning]Failed to save cache entry with path '/home/runner/.gradle/caches/modules-*/files-*/*/*/*/*' and key: gradle-dependencies-v1-09387956c268e80aeff983c4b320ac2c: Error: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>0oFLwagAAAAAl2AYcwhHtQpI9R1c/oFBtUEhYMzFFREdFMDYwOABFZGdl
+2026-11-08T10:44:49.2070808Z ##[warning]Failed to save cache entry with path '/home/runner/.gradle/caches/jars-*/*/' and key: gradle-instrumented-jars-v1-536d6aff2f58aef5241cb3b63f6c25db: Error: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>0oVLwagAAAACHpJTghmCpQo59nEABOEdkUEhYMzFFREdFMDIwOABFZGdl
+2026-11-08T10:44:49.3022884Z Caching Gradle User Home with cache key: gradle-home-v1|Linux|build[620c74083efa5b88ef904c2356f72d31]-6d11dc86add5da12e28423a4ba28591ea059ae10
+2026-11-08T10:44:49.3098680Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/Business-Manager/Business-Manager --files-from manifest.txt --use-compress-program zstdmt
+2026-11-08T10:44:49.3810630Z ##[warning]Failed to save cache entry with path '/home/runner/.gradle/caches,/home/runner/.gradle/notifications,/home/runner/.gradle/.setup-gradle' and key: gradle-home-v1|Linux|build[620c74083efa5b88ef904c2356f72d31]-6d11dc86add5da12e28423a4ba28591ea059ae10: Error: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>0oVLwagAAAABRLhFdGDz7Qrth8hsw9fQxUEhYMzFFREdFMDYyMQBFZGdl
+2026-11-08T10:44:49.3814677Z ##[endgroup]
+2026-11-08T10:44:49.3814958Z Generating Job Summary
+2026-11-08T10:44:49.3823203Z Completed post-action step
