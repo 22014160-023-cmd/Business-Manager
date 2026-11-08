@@ -1,0 +1,23 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url "https://chaquo.com/maven" }
+    }
+    plugins {
+        id 'com.android.application' version '7.4.2'
+        id 'org.jetbrains.kotlin.android' version '1.8.0'
+        id 'com.chaquo.python' version '14.0.2'
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://chaquo.com/maven" }
+    }
+}
+rootProject.name = "BusinessManager"
+include ':app'

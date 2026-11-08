@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Business Manager</h1>
+        <span class="badge">LIVE</span>
+    </div>
+    <div class="card main-card">
+        <p>Today's Sales</p>
+        <h2 id="total-sales">₹0</h2>
+        <button onclick="addSale()">+ Add Sale (₹100)</button>
+    </div>
+    <div class="card">
+        <h3>Live Feed</h3>
+        <ul id="sales-list"><li>No sales yet...</li></ul>
+    </div>
+    <div class="footer">
+        <button onclick="getSales()">Refresh Feed</button>
+        <button onclick="generatePDF()">Generate PDF</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
